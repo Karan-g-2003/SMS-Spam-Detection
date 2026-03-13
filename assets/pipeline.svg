@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="pipe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#7b2ff7"/>
+    </linearGradient>
+    <linearGradient id="step1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0f2035"/>
+    </linearGradient>
+    <linearGradient id="step2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b4e"/>
+      <stop offset="100%" style="stop-color:#1a0f30"/>
+    </linearGradient>
+    <linearGradient id="step3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b3a3a"/>
+      <stop offset="100%" style="stop-color:#0f2525"/>
+    </linearGradient>
+    <linearGradient id="step4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a1b2d"/>
+      <stop offset="100%" style="stop-color:#250f1a"/>
+    </linearGradient>
+    <linearGradient id="step5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b3a1b"/>
+      <stop offset="100%" style="stop-color:#0f250f"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <style>
+      .label { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: #e0e0e0; font-weight: 600; }
+      .sublabel { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 9px; fill: #8888a8; }
+      .icon-text { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 22px; }
+      @keyframes arrowPulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+      .arrow { animation: arrowPulse 2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" rx="12" fill="#0d1117"/>
+
+  <!-- Pipeline label -->
+  <text x="450" y="30" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#58a6ff" font-weight="600" letter-spacing="3">ML PIPELINE ARCHITECTURE</text>
+  <rect x="310" y="36" width="280" height="1" rx="0.5" fill="url(#pipe)" opacity="0.4"/>
+
+  <!-- Step 1: Data -->
+  <g transform="translate(30, 60)" filter="url(#shadow)">
+    <rect width="140" height="105" rx="10" fill="url(#step1)" stroke="#1e5a8f" stroke-width="1" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" class="icon-text">📩</text>
+    <text x="70" y="65" text-anchor="middle" class="label">Data Loading</text>
+    <text x="70" y="82" text-anchor="middle" class="sublabel">UCI SMS Dataset</text>
+    <text x="70" y="95" text-anchor="middle" class="sublabel">5,572 messages</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g class="arrow" style="animation-delay: 0s">
+    <line x1="178" y1="112" x2="198" y2="112" stroke="url(#pipe)" stroke-width="2"/>
+    <polygon points="198,107 210,112 198,117" fill="#00d2ff"/>
+  </g>
+
+  <!-- Step 2: Preprocess -->
+  <g transform="translate(210, 60)" filter="url(#shadow)">
+    <rect width="140" height="105" rx="10" fill="url(#step2)" stroke="#5a3a8f" stroke-width="1" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" class="icon-text">⚙️</text>
+    <text x="70" y="65" text-anchor="middle" class="label">Preprocessing</text>
+    <text x="70" y="82" text-anchor="middle" class="sublabel">Tokenize · Stem</text>
+    <text x="70" y="95" text-anchor="middle" class="sublabel">Remove stopwords</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g class="arrow" style="animation-delay: 0.4s">
+    <line x1="358" y1="112" x2="378" y2="112" stroke="url(#pipe)" stroke-width="2"/>
+    <polygon points="378,107 390,112 378,117" fill="#5a3af7"/>
+  </g>
+
+  <!-- Step 3: Vectorize -->
+  <g transform="translate(390, 60)" filter="url(#shadow)">
+    <rect width="140" height="105" rx="10" fill="url(#step3)" stroke="#3a8f5a" stroke-width="1" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" class="icon-text">🔢</text>
+    <text x="70" y="65" text-anchor="middle" class="label">Vectorization</text>
+    <text x="70" y="82" text-anchor="middle" class="sublabel">TF-IDF</text>
+    <text x="70" y="95" text-anchor="middle" class="sublabel">Feature extraction</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g class="arrow" style="animation-delay: 0.8s">
+    <line x1="538" y1="112" x2="558" y2="112" stroke="url(#pipe)" stroke-width="2"/>
+    <polygon points="558,107 570,112 558,117" fill="#7b2ff7"/>
+  </g>
+
+  <!-- Step 4: Ensemble -->
+  <g transform="translate(570, 60)" filter="url(#shadow)">
+    <rect width="140" height="105" rx="10" fill="url(#step4)" stroke="#8f3a5a" stroke-width="1" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" class="icon-text">🧠</text>
+    <text x="70" y="65" text-anchor="middle" class="label">Ensemble Model</text>
+    <text x="70" y="82" text-anchor="middle" class="sublabel">SVM + NB + Trees</text>
+    <text x="70" y="95" text-anchor="middle" class="sublabel">Soft Voting</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <g class="arrow" style="animation-delay: 1.2s">
+    <line x1="718" y1="112" x2="738" y2="112" stroke="url(#pipe)" stroke-width="2"/>
+    <polygon points="738,107 750,112 738,117" fill="#00d2ff"/>
+  </g>
+
+  <!-- Step 5: Output -->
+  <g transform="translate(748, 60)" filter="url(#shadow)">
+    <rect width="120" height="105" rx="10" fill="url(#step5)" stroke="#3a8f3a" stroke-width="1" opacity="0.9"/>
+    <text x="60" y="40" text-anchor="middle" class="icon-text">✅</text>
+    <text x="60" y="65" text-anchor="middle" class="label">Prediction</text>
+    <text x="60" y="82" text-anchor="middle" class="sublabel">Spam / Ham</text>
+    <text x="60" y="95" text-anchor="middle" class="sublabel">97%+ Accuracy</text>
+  </g>
+
+  <!-- Bottom gradient line -->
+  <rect x="30" y="185" width="840" height="1.5" rx="0.75" fill="url(#pipe)" opacity="0.2"/>
+</svg>
