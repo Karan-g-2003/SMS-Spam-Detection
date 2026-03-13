@@ -35,7 +35,7 @@
   <!-- Main text -->
   <text x="450" y="52" text-anchor="middle" class="footer-text" font-size="14" fill="#a0a0b8" letter-spacing="1">
     Built with 💜 by
-    <tspan fill="#b794f6" font-weight="600"> Karan Gupta</tspan>
+    <tspan fill="#b794f6" font-weight="600"> Karan Ghuwalewala</tspan>
   </text>
 
   <!-- Sub text -->
